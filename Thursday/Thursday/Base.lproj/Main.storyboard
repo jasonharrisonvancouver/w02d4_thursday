@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="la2-6h-kkW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Car View Controller-->
+        <scene sceneID="b4H-ij-ruS">
+            <objects>
+                <viewController id="nBB-3d-SgN" customClass="CarViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bn1-Bq-vZd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mileage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCg-4J-3cj">
+                                <rect key="frame" x="16" y="100" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TCg-4J-3cj" firstAttribute="leading" secondItem="Smv-rm-WrI" secondAttribute="leading" constant="16" id="IhQ-Q1-KoH"/>
+                            <constraint firstItem="Smv-rm-WrI" firstAttribute="trailing" secondItem="TCg-4J-3cj" secondAttribute="trailing" constant="16" id="W83-8S-f0z"/>
+                            <constraint firstItem="TCg-4J-3cj" firstAttribute="top" secondItem="Smv-rm-WrI" secondAttribute="top" constant="80" id="yHw-je-6f0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Smv-rm-WrI"/>
+                    </view>
+                    <connections>
+                        <outlet property="mileageLabel" destination="TCg-4J-3cj" id="ubL-f2-MrH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qOP-ss-okJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-978.39999999999998" y="-93.103448275862078"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-177" y="-93"/>
+        </scene>
+        <!--Constrols View Controller-->
+        <scene sceneID="aMy-0t-FlY">
+            <objects>
+                <viewController id="la2-6h-kkW" customClass="ConstrolsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pir-y6-zMK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wxN-2t-0Dx">
+                                <rect key="frame" x="141" y="136" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="swtichChanged" destination="la2-6h-kkW" eventType="valueChanged" id="DZL-fH-1GR"/>
+                                </connections>
+                            </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="aEA-UT-fhc">
+                                <rect key="frame" x="218" y="101" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="valueChanged:" destination="la2-6h-kkW" eventType="valueChanged" id="Ozy-TP-rN3"/>
+                                </connections>
+                            </slider>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pickle_rick" translatesAutoresizingMaskIntoConstraints="NO" id="6qZ-6I-gnv">
+                                <rect key="frame" x="16" y="-153" width="343" height="800"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="edr-aa-cMJ" appends="YES" id="omy-iz-PQx"/>
+                                    <outletCollection property="gestureRecognizers" destination="1RT-yt-Foe" appends="YES" id="gtu-md-ZRc"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uvy-jY-Ogt">
+                                <rect key="frame" x="94" y="111" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="touchUpInside:" destination="la2-6h-kkW" eventType="touchUpInside" id="dYW-fJ-q9Q"/>
+                                    <action selector="touchUpOutside:" destination="la2-6h-kkW" eventType="touchUpOutside" id="cwc-Yq-zZd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qrg-gp-dYr" firstAttribute="trailing" secondItem="6qZ-6I-gnv" secondAttribute="trailing" constant="16" id="7ps-wp-hgv"/>
+                            <constraint firstItem="6qZ-6I-gnv" firstAttribute="leading" secondItem="Qrg-gp-dYr" secondAttribute="leading" constant="16" id="Rnv-hI-paH"/>
+                            <constraint firstItem="Qrg-gp-dYr" firstAttribute="bottom" secondItem="6qZ-6I-gnv" secondAttribute="bottom" constant="20" id="tF5-eT-Udk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qrg-gp-dYr"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="Uvy-jY-Ogt" id="kjn-vt-uuJ"/>
+                        <outlet property="pickleRick" destination="6qZ-6I-gnv" id="Cht-r2-uMe"/>
+                        <outlet property="tapGestureRecognizer" destination="edr-aa-cMJ" id="rsY-os-MDV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C3o-w2-e72" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="edr-aa-cMJ">
+                    <connections>
+                        <action selector="tappedRick:" destination="la2-6h-kkW" id="tgU-rX-KKT"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1" numberOfTouchesRequired="2" id="1RT-yt-Foe">
+                    <connections>
+                        <action selector="longPressrick:" destination="la2-6h-kkW" id="FvN-Cd-6hc"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="848.79999999999995" y="-435.83208395802103"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Pickle_rick" width="605" height="800"/>
+    </resources>
+</document>
